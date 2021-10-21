@@ -87,7 +87,7 @@ class Form extends React.Component {
             data-testid="trunfo-input"
             type="checkbox"
           />}
-          <buttonw
+          <button
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
             type="submit"
@@ -95,7 +95,7 @@ class Form extends React.Component {
           >
             Salvar
 
-          </buttonw>
+          </button>
         </form>
       </div>
     );
