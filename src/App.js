@@ -12,10 +12,11 @@ class App extends React.Component {
       cardAttr2: '',
       cardAttr3: '',
       cardImage: '',
-      cardRare: '',
+      cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
+      cartas: [],
     };
   }
 
@@ -88,7 +89,36 @@ class App extends React.Component {
     }
   }
 
-  onSaveButtonClick = () => {}
+  onSaveButtonClick = (event) => {
+    event.preventDefault();
+    const { cardName, cardDescription, cardImage, cardAttr1,
+      cardAttr2, cardAttr3, cardRare, cardTrunfo } = this.state;
+    const cartaAtual = { cardName,
+      cardDescription,
+      cardImage,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardRare,
+      cardTrunfo };
+    this.setState((EstadoAnterior) => (
+      { cartas: [cartaAtual, ...EstadoAnterior.cartas] }
+    ), this.limpar);
+  }
+
+  limpar = () => {
+    this.setState(
+      { cardName: '',
+        cardDescription: '',
+        cardImage: '',
+        cardAttr1: '0',
+        cardAttr2: '0',
+        cardAttr3: '0',
+        cardRare: 'normal',
+      },
+
+    );
+  }
 
   render() {
     const {
