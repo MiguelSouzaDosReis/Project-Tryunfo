@@ -19,6 +19,7 @@ class Form extends React.Component {
       <div>
         <form>
           <input
+            required
             name="cardName"
             value={ cardName }
             onChange={ onInputChange }
@@ -26,12 +27,15 @@ class Form extends React.Component {
             type="text"
           />
           <textarea
+            required
             name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
           />
           <input
+            max={ 90 }
+            min={ 0 }
             name="cardAttr1"
             value={ cardAttr1 }
             onChange={ onInputChange }
@@ -39,6 +43,8 @@ class Form extends React.Component {
             type="number"
           />
           <input
+            max={ 90 }
+            min={ 0 }
             name="cardAttr2"
             value={ cardAttr2 }
             onChange={ onInputChange }
@@ -46,6 +52,8 @@ class Form extends React.Component {
             type="number"
           />
           <input
+            max={ 90 }
+            min={ 0 }
             name="cardAttr3"
             value={ cardAttr3 }
             onChange={ onInputChange }
@@ -53,6 +61,7 @@ class Form extends React.Component {
             type="number"
           />
           <input
+            required
             name="cardImage"
             value={ cardImage }
             onChange={ onInputChange }
@@ -79,7 +88,7 @@ class Form extends React.Component {
           <button
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
-            type="button"
+            type="submit"
             data-testid="save-button"
           >
             Salvar
