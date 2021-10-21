@@ -104,6 +104,11 @@ class App extends React.Component {
     this.setState((EstadoAnterior) => (
       { cartas: [cartaAtual, ...EstadoAnterior.cartas] }
     ), this.limpar);
+    if (cardTrunfo) {
+      this.setState(
+        { hasTrunfo: true },
+      );
+    }
   }
 
   limpar = () => {
