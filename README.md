@@ -1,3 +1,3 @@
 # Project Tryunfo
 
-Neste projeto, criei um site aprofundando assim os meus conhecimentos de React, utilizando estados dos componentes. O site que eu criei foi este aqui que você pode conferir _[Project Tryunfo](https://project-tryunfo.pages.dev/)_
+Neste projeto aprofundei os meus conhecimentos de React, utilizando estados dos componentes. O site é uma crianção de trunfo na qual o usuário pode cria o seu trunfo. Você pode conferir _[Project Tryunfo](https://project-tryunfo.pages.dev/)_
