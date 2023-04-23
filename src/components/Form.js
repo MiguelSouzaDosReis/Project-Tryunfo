@@ -20,6 +20,7 @@ class Form extends React.Component {
     return (
       <div>
         <form>
+          <p>Nome:</p>
           <input
             required
             name="cardName"
@@ -28,6 +29,7 @@ class Form extends React.Component {
             data-testid="name-input"
             type="text"
           />
+          <p>Descriçao:</p>
           <textarea
             required
             name="cardDescription"
@@ -35,6 +37,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="description-input"
           />
+          <p>Atributo:</p>
           <input
             max={ 90 }
             min={ 0 }
@@ -62,6 +65,7 @@ class Form extends React.Component {
             data-testid="attr3-input"
             type="number"
           />
+          <p>Imagem:</p>
           <input
             required
             name="cardImage"
@@ -70,6 +74,7 @@ class Form extends React.Component {
             data-testid="image-input"
             type="text"
           />
+          <p>Raridade:</p>
           <select
             name="cardRare"
             value={ cardRare }
@@ -80,6 +85,7 @@ class Form extends React.Component {
             <option value="raro">raro</option>
             <option value="muito raro">muito raro</option>
           </select>
+          <p>Super Trufo:</p>
           { hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : <input
             name="cardTrunfo"
             checked={ cardTrunfo }
@@ -87,6 +93,7 @@ class Form extends React.Component {
             data-testid="trunfo-input"
             type="checkbox"
           />}
+          <br />
           <button
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }

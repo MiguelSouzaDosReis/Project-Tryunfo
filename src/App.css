@@ -1,0 +1,59 @@
+body{
+    background-color: #F5F5F5;
+}
+
+div {
+    width: 200px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* margem horizontal automática */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  div p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  div img {
+    max-width: 100%;
+    max-height: 60%;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  div [data-testid="trunfo-card"] {
+    background-color: #FFD700;
+    color: #100c0c;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  
+  div [data-testid="name-card"] {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  div [data-testid="description-card"] {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  div [data-testid="attr1-card"],
+  div [data-testid="attr2-card"],
+  div [data-testid="attr3-card"] {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  div [data-testid="rare-card"] {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  

@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import './App.css'
 
 class App extends React.Component {
   constructor() {
@@ -16,6 +17,7 @@ class App extends React.Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
+      duzendosEdez: 210,
       cartas: [],
     };
   }
@@ -59,10 +61,9 @@ class App extends React.Component {
   }
 
   soma210 = () => {
-    const { cardAttr1, cardAttr2, cardAttr3 } = this.state;
-    const duzendos = 210;
+    const { cardAttr1, cardAttr2, cardAttr3, duzendosEdez } = this.state;
     const soma = parseFloat(cardAttr1) + parseFloat(cardAttr2) + parseFloat(cardAttr3);
-    if (soma <= duzendos) {
+    if (soma <= duzendosEdez) {
       return true;
     }
   }
@@ -138,6 +139,7 @@ class App extends React.Component {
       hasTrunfo,
       isSaveButtonDisabled,
       cartas,
+      duzendosEdez
     } = this.state;
     return (
       <div>
@@ -165,6 +167,7 @@ class App extends React.Component {
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
+          duzendosEdez={ duzendosEdez }
         />
         {cartas.map((element) => (<Card
           key={ element.cardName }
